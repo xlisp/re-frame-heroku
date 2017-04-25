@@ -20,6 +20,7 @@
                  [org.clojure/clojurescript "1.9.521" :scope "provided"]
                  [org.clojure/tools.cli "0.3.5"]
                  [org.clojure/tools.logging "0.3.1"]
+                 [org.clojure/java.jdbc "0.7.0-alpha3"]
                  [org.postgresql/postgresql "42.0.0"]
                  [org.webjars.bower/tether "1.4.0"]
                  [org.webjars/bootstrap "4.0.0-alpha.5"]
@@ -31,7 +32,8 @@
                  [ring/ring-core "1.6.0-RC3"]
                  [ring/ring-defaults "0.2.3"]
                  [secretary "1.2.3"]
-                 [selmer "1.10.7"]]
+                 [selmer "1.10.7"]
+                 [honeysql "0.8.2"]]
 
   :min-lein-version "2.0.0"
 
