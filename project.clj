@@ -3,7 +3,8 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
 
-  :dependencies [[cljs-ajax "0.5.9"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [cljs-ajax "0.5.9"]
                  [compojure "1.5.2"]
                  [conman "0.6.3"]
                  [cprop "0.1.10"]
