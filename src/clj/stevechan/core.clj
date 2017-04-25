@@ -5,7 +5,7 @@
             [luminus-migrations.core :as migrations]
             [stevechan.config :refer [env]]
             [clojure.tools.cli :refer [parse-opts]]
-            [clojure.tools.logging :as log]
+            ;;[clojure.tools.logging :as log]
             [mount.core :as mount]
             [clojure.java.jdbc :as j]
             [honeysql.core :as sql]
