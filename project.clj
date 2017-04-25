@@ -59,7 +59,10 @@
   
 
   :profiles
-  {:uberjar {:omit-source true
+  {:uberjar {;;:aot :all
+             :aot [stevechan.core]
+             ;;
+             :omit-source true
              :prep-tasks ["compile" ["cljsbuild" "once" "min"]]
              :cljsbuild
              {:builds
@@ -73,8 +76,6 @@
                  {:externs-validation :off :non-standard-jsdoc :off}
                  :externs ["react/externs/react.js"]}}}}
              
-             
-             :aot :all
              :uberjar-name "stevechan.jar"
              :source-paths ["env/prod/clj"]
              :resource-paths ["env/prod/resources"]}
