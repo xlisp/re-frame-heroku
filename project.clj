@@ -4,6 +4,7 @@
   :url "http://example.com/FIXME"
 
   :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/clojurescript "1.9.521" :scope "provided"]
                  [cljs-ajax "0.5.9"]
                  [compojure "1.5.2"]
                  [conman "0.6.3"]
@@ -17,8 +18,6 @@
                  [metosin/muuntaja "0.2.1"]
                  [metosin/ring-http-response "0.8.2"]
                  [mount "0.1.11"]
-                 [org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.521" :scope "provided"]
                  [org.clojure/tools.cli "0.3.5"]
                  [org.clojure/tools.logging "0.3.1"]
                  [org.clojure/java.jdbc "0.7.0-alpha3"]
