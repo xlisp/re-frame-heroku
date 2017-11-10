@@ -6,7 +6,10 @@
             [goog.history.EventType :as HistoryEventType]
             [markdown.core :refer [md->html]]
             [stevechan.ajax :refer [load-interceptors!]]
-            [ajax.core :refer [GET POST]])
+            [ajax.core :refer [GET POST]]
+            [todomvc.events :as todo-events]
+            [todomvc.subs :as todo-subs]
+            [todomvc.views :as todo-views])
   (:import goog.History))
 
 (defn nav-link [uri title page collapsed?]

@@ -4,7 +4,7 @@
   :url "http://example.com/FIXME"
 
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.521" :scope "provided"]
+                 [org.clojure/clojurescript  "1.9.908"]
                  [cljs-ajax "0.5.9"]
                  [compojure "1.5.2"]
                  [conman "0.6.3"]
@@ -26,7 +26,9 @@
                  [org.webjars/bootstrap "4.0.0-alpha.5"]
                  [org.webjars/font-awesome "4.7.0"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
-                 [reagent "0.6.1"]
+                 [reagent "0.7.0"]
+                 [re-frame "0.10.1"]
+                 [binaryage/devtools "0.9.4"]
                  [reagent-utils "0.2.1"]
                  [ring-webjars "0.1.1"]
                  [ring/ring-core "1.6.0-RC3"]
@@ -88,14 +90,14 @@
                                  [ring/ring-mock "0.3.0"]
                                  [ring/ring-devel "1.5.1"]
                                  [pjstadig/humane-test-output "0.8.1"]
-                                 [binaryage/devtools "0.9.3"]
+                                 [binaryage/devtools "0.9.4"]
                                  [com.cemerick/piggieback "0.2.2-SNAPSHOT"]
                                  [doo "0.1.7"]
                                  [figwheel-sidecar "0.5.10"]]
                   :plugins      [[com.jakemccrary/lein-test-refresh "0.19.0"]
                                  [lein-doo "0.1.7"]
                                  [lein-figwheel "0.5.10"]
-                                 [org.clojure/clojurescript "1.9.521"]]
+                                 [org.clojure/clojurescript  "1.9.908"]]
                   :cljsbuild
                   {:builds
                    {:app
