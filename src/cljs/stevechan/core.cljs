@@ -1,5 +1,7 @@
 (ns stevechan.core
+  (:require-macros [secretary.core :refer [defroute]])
   (:require [reagent.core :as r]
+            [re-frame.core :refer [dispatch dispatch-sync]]
             [reagent.session :as session]
             [secretary.core :as secretary :include-macros true]
             [goog.events :as events]
@@ -10,7 +12,11 @@
             [todomvc.events :as todo-events]
             [todomvc.subs :as todo-subs]
             [todomvc.views :as todo-views])
-  (:import goog.History))
+  (:import [goog History]
+           [goog.history EventType]))
+
+(defroute "/" [] (dispatch [:set-showing :all]))
+(defroute "/:filter" [filter] (dispatch [:set-showing (keyword filter)]))
 
 (defn nav-link [uri title page collapsed?]
   [:li.nav-item
@@ -80,9 +86,10 @@
 
 (defn mount-components []
   (r/render [#'navbar] (.getElementById js/document "navbar"))
-  (r/render [#'page] (.getElementById js/document "app")))
+  (r/render [#'todo-views/todo-app] (.getElementById js/document "app")))
 
 (defn init! []
+  (dispatch-sync [:initialise-db])
   (load-interceptors!)
   (fetch-docs!)
   (hook-browser-navigation!)
